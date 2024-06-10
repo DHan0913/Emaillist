@@ -47,8 +47,8 @@ for (EmailVo vo: list) {
             <td colspan="2">
                 <!-- 삭제 버튼 -->
                 <form action="<%= request.getContextPath() %>/delete.jsp" method="POST">
-                    <!-- 삭제할 레코드의 이메일 값을 hidden input으로 전달 -->
-                    <input type="hidden" name="email" value="<%= vo.getEmail() %>">
+                    <!-- 삭제할 레코드의 번호 값을 hidden input으로 전달 -->
+                    <input type="hidden" name="no" value="<%= vo.getNo() %>">
                     <input type="submit" value="삭제">
                 </form>
             </td>

@@ -7,15 +7,15 @@ String dbuser = context.getInitParameter("dbuser");
 String dbpass = context.getInitParameter("dbpass");
 
 // 폼 입력 데이터
-String emailToDelete = request.getParameter("email"); // 삭제할 email 값
+String noToDelete = request.getParameter("no"); // 삭제할 no 값
 
 String dburl = "jdbc:oracle:thin:@localhost:1521:xe";
 
 try (Connection conn = DriverManager.getConnection(dburl, dbuser, dbpass);
-     PreparedStatement pstmt = conn.prepareStatement("DELETE FROM emaillist WHERE email = ?")) {
+     PreparedStatement pstmt = conn.prepareStatement("DELETE FROM emaillist WHERE no = ?")) {
     
     // 데이터 바인딩
-    pstmt.setString(1, emailToDelete); // 첫 번째 ? 자리에 emailToDelete 값을 설정
+    pstmt.setString(1, noToDelete); // 첫 번째 ? 자리에 noToDelete 값을 설정
 
     int deletedCount = pstmt.executeUpdate(); // 영향 받은 레코드 카운트
 
@@ -25,7 +25,7 @@ try (Connection conn = DriverManager.getConnection(dburl, dbuser, dbpass);
     } else {
         %>
         <h1>Error</h1>
-        <p>데이터 삭제 중 오류가 발생했습니다. 해당 이메일의 데이터가 존재하지 않습니다.</p>
+        <p>데이터 삭제 중 오류가 발생했습니다. 해당 번호의 데이터가 존재하지 않습니다.</p>
         <%
     }
 } catch (Exception e) {

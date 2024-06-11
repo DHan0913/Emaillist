@@ -11,7 +11,7 @@
     <p>메일링 리스트에 가입하시려면,<br />
        아래 항목을 기입하고 등록 버튼을 클릭하세요.
     </p>
-    <form action="<%= request.getContextPath() %>/insert.jsp" method="POST">
+    <form action="<%= request.getContextPath() %>/emaillist/insert.jsp" method="POST">
         <label for="ln">성</label>
         <input type="text" name="ln" value=""><br />
         <label for="fn">이름</label>
@@ -23,7 +23,7 @@
 
 
     <p>
-        <a href="<%= request.getContextPath() %>">목록</a>
+        <a href="<%= request.getContextPath()+"/emaillist/" %>">목록</a>
     </p>
 </body>
 </html>

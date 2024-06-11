@@ -21,7 +21,7 @@ try (Connection conn = DriverManager.getConnection(dburl, dbuser, dbpass);
 
     if (deletedCount >= 1) { // DELETE 성공
         // 다른 페이지로 리다이렉트 : 3xx
-        response.sendRedirect(request.getContextPath());
+        response.sendRedirect(request.getContextPath() + "/emaillist/");
     } else {
         %>
         <h1>Error</h1>

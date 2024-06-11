@@ -48,7 +48,7 @@ try {
 	   */
 	   
 if (success) {
-	response.sendRedirect(request.getContextPath());	
+	response.sendRedirect(request.getContextPath() +"/emaillist/");	
 } else {
       %>
       <h1>Error</h1>

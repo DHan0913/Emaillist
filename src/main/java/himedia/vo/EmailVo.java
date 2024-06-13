@@ -2,6 +2,11 @@ package himedia.vo;
 
 import java.util.Date;
 
+//	Table emaillist의 레코드를 저장하기 위한 DTO 객체
+//	1. 기본 생성자를 가지고 있다
+//	2. 비즈니스 로직을 가지지 않은 순수 데이터 객체
+//	3. 필드, getters/setters
+//	4. toString, equals 등 객체 관련 메서드들 오버라이드 
 public class EmailVo {
 	// 필드
 	private Long no;
@@ -23,14 +28,14 @@ public class EmailVo {
 		this.createdAt = createdAt;
 	}
 
-	// no(PK) -> 시퀸스, createdAt -> default
+	// no(PK) -> 시퀀스, createdAt -> default
 	public EmailVo(String lastName, String firstName, String email) {
 		this.lastName = lastName;
 		this.firstName = firstName;
 		this.email = email;
 	}
 
-	//	getters and setters
+	// Getters and Setters
 	public Long getNo() {
 		return no;
 	}
@@ -76,7 +81,5 @@ public class EmailVo {
 		return "EmailVo [no=" + no + ", lastName=" + lastName + ", firstName=" + firstName + ", email=" + email
 				+ ", createdAt=" + createdAt + "]";
 	}
-	
-	
 
 }

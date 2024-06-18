@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 	<!DOCTYPE html>
 	<html>
 
@@ -30,7 +31,7 @@
 		</form>
 
 		<p>
-			<a href="<%= request.getContextPath() %>/el">목록</a>
+			<a href="<c:url value ="/el" />"> 목록</a>
 		</p>
 	</body>
 
